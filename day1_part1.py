@@ -4432,6 +4432,17 @@ L41
 R3
 """
 
+something = """L68
+L30
+R48
+L5
+R60
+L55
+L1
+L99
+R14
+L82"""
+
 codes = moves.strip().splitlines()
 
 start = 50
@@ -4447,5 +4458,6 @@ for code in codes:
     if start == 0:
         no_of_zeros += 1
 
-print(start)
-print(no_of_zeros)
+if __name__ == "__main__":
+    print(start)
+    print(no_of_zeros)
