@@ -4445,19 +4445,22 @@ L82"""
 
 codes = moves.strip().splitlines()
 
-start = 50
-no_of_zeros = 0
 
-for code in codes:
-    code_int = int(code[1:])
-    if code[0] == "L":
-        start = (start - code_int) % 100
-    else:
-        start = (start + code_int) % 100
-    
-    if start == 0:
-        no_of_zeros += 1
+def part1():
+    start = 50
+    no_of_zeros = 0
+    for code in codes:
+        code_int = int(code[1:])
+        if code[0] == "L":
+            start = (start - code_int) % 100
+        else:
+            start = (start + code_int) % 100
+        
+        if start == 0:
+            no_of_zeros += 1
+    return no_of_zeros
+
+no_of_zeros = part1()
 
 if __name__ == "__main__":
-    print(start)
     print(no_of_zeros)
